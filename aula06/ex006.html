@@ -3,29 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
+    <title>javascript</title>
     <style>
-        #area{
-            background-color: rgb(29, 161, 29);
+        #room{
+            background-color:green;
             color: white;
             width: 200px;
             height: 200px;
             line-height: 200px;
-            text-align: center;
             font-size: 2em;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">
+    <div id="room" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
         Clique aqui...
     </div>
 
     <script>
-        function clicar() {
-            var a = window.document.getElementById('area')
-            a.innerText='Clicou!'
-            a.style.background='green'
+         var A = window.document.getElementById('room')
+
+        function clicar(){
+            A.innerText='Clicou!'
+            A.style.background= 'red'
+        }
+        function entrar(){
+            A.innerText='Entrou'
+        }
+        function sair(){
+            A.innerText='Saiu'
+            A.style.background='green'
         }
     </script>
 </body>
