@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+
+    <p>Nome: <input type="text" name="iname" id="name"></p>
+
+    <p>Nasci no(a): <input type="text" name="ndd" id="ndd">
+
+    <p><input type="button" value="Verificar" onclick="verificar()"></p>
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var nome = window.document.getElementById('name')
+            var loc = window.document.getElementById('ndd')
+            var res = window.document.getElementById('res')
+            res.innerHTML = `Olá ${nome}.`
+            if(loc == "brasil") {
+                res.innerHTML += 'Voce é Brasileiro'
+            } else {
+                res.innerHTML += 'Voçe é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
